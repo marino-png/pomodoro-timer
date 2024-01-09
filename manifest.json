@@ -1,0 +1,16 @@
+{
+    "manifest_version":3,
+    "name": "Tomato timer",
+    "version": "1.0",
+    "description": "the extension that help you focus",
+    "icons":{
+        "16" :"images/pomodoro.png",
+        "48" :"images/pomodoro.png",
+        "128" :"images/pomodoro.png"
+    },
+    "action":{
+        "default_icon":"images/pomodoro.png",
+        "default_title":"Tomato timer",
+        "default_popup": "popup/popup.html"
+    }
+}
