@@ -8,5 +8,15 @@ startTimerBtn.addEventListener("click", () => {
             startTimerBtn.textContent = !res.isRunning ? "Pause Timer" : "Start Timer"
         }
     })
-    
+})
+
+const resetTimerBtn = document.getElementById("reset-timer-btn")
+
+resetTimerBtn.addEventListener("click", () => {
+    chrome.storage.local.set({
+        timer: 0,
+        isRunning: false,
+    },() => {
+        startTimerBtn.textContent = "Start Timer"
+    })
 })
