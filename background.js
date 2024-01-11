@@ -7,7 +7,16 @@ chrome.alarms.onAlarm.addListener((alarm)=>{
         chrome.storage.local.get(["timer", "isRunning"], (res) => {
             if (res.isRunning){
                 let timer = res.timer+1
+                let isRunning = true
                 console.log(timer)
+                if (timer === 25 * 60){
+                    this.registration.showNotification("Tomato Timer", {
+                        body: "25 minutes has passed",
+                        icon: "images/pomodoro.png",
+                    })
+                    timer = 0
+                    isRunning = false
+                }
                 chrome.storage.local.set({
                     timer,
                 })
