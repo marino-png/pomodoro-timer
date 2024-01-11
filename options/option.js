@@ -1,16 +1,16 @@
 const timeOption = document.getElementById("time-option")
 timeOption.addEventListener("click", (event) => {
     const val = event.target.value
-    if(val < 1 || val > 60){
-        timeOption.value = 25
-    }
 })
 
 const saveBtn = document.getElementById("save-btn")
 saveBtn.addEventListener("click", () => {
+    const selectedTimeOption = timeOption.value;
+    const validatedTimeOption = (selectedTimeOption >= 1 && selectedTimeOption <= 60)
+        ? selectedTimeOption: 25;
     chrome.storage.local.set({
         timer: 0,
-        timeOption: timeOption.value,
+        timeOption: validatedTimeOption,
         isRunning: false,
     })
 })
