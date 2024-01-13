@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="popup.css">
-    <title>Tomato timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    <title>Tomato timer</title>
 </head>
 <body>
-    <div class="header">
-        <img src="../images/pomodoro.png">
+    <div id="big-container">
+        <div class="header">
+            <img src="../images/pomodore2.png">
+        </div>
+        <h1 id="time" class="timer">00:00</h1>
+        <div class="btns">
+            <button id="start-timer-btn">Start Timer</button>
+            <button id="reset-timer-btn">Reset Timer</button>
+        </div>
     </div>
-    <h1 id="time">00:00</h1>
-    <button id="start-timer-btn">Start Timer</button>
-    <button id="reset-timer-btn">Reset Timer</button>
 </body>
 <script src="popup.js"></script>
 </html>

@@ -1,8 +1,46 @@
+.archivo-timer {
+  font-family: "Archivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
 body{
-
+    background-color: #e35245;  
+    font-family: 'Roboto', sans-serif;
+    display: flex;   
+    justify-content: center;
+    width: 180px
+}
+h1{
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
 }
 .header{
     display: flex;
     justify-content: center;
     height: 40px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.btns{
+    display: flex;   
+    justify-content: center;
+}
+button {
+    font-size: 16px;
+    color: white;
+    background-color: #333333;
+    border: 2px solid #969696;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10%;
+    width: 80px;
+}
+button:hover {   
+    background-color: #666666; 
 }
