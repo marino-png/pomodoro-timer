@@ -1,0 +1,38 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    background-color: #e35245;
+    color: #075107ba;
+}
+.container{
+    padding: 5px;
+}
+.header{
+    display: flex;
+    justify-content: center;
+}
+img{
+    height: 50px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+article{
+    text-align: center;
+    margin: 10px;
+    font-size: 15px; 
+}
+.buttons input,
+.buttons button{
+    border-radius: 10px;
+    border: 2px solid #3c7b3cba;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {   
+    background-color: #3c7b3cba; 
+}
