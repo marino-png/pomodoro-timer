@@ -1,3 +1,19 @@
+const worker = new Worker(chrome.runtime.getURL('worker.js'));
+
+chrome.storage.local.get(["timer","isRunning", "timeOption"],(res)=>{
+  // Send the data to the worker
+  worker.postMessage(res);
+
+  // Listen for messages from the worker
+  worker.onmessage = function(event) {
+    // This will be the updated timer from the worker
+    const { timer } = event.data;
+
+    // Update the timer in storage
+    chrome.storage.local.set({ timer });
+  };
+});
+
 function updateTime(){
     chrome.storage.local.get(["timer", "timeOption"], (res) =>{
         const time = document.getElementById("time")
