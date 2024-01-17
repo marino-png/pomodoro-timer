@@ -19,7 +19,7 @@
         "notifications"
     ],
     "background":{
-        "service_worker":"background.js"
+        "service_worker":"worker.js"
     },
     "options_page":"options/option.html"
 }
